@@ -4,7 +4,6 @@ const fs = require('fs');
 // CREATE A SAUCE
 exports.createSauce = (req, res, next) => {
 	const sauceObject = JSON.parse(req.body.sauce);
-  console.log(sauceObject);
   delete sauceObject._id;
   const sauce = new Sauce ({
     ...sauceObject,
